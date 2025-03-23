@@ -12,10 +12,10 @@ class A{
         strptr=new string;
         *strptr=name;
     }
-    A(A &obj){              // shallow copy constructor
+    A(A &obj){              // Deep copy constructor
         this->a=obj.a;
         this->b=obj.b;
-        strptr=new string;
+        strptr=new string;   // new space for copy constructor
         *strptr=*obj.strptr;
     }
     void getinfo(){
@@ -27,7 +27,9 @@ int main(){
     A obj1(10,20,"Rahul Raj");
     obj1.getinfo();
     A obj2(obj1);     
-    *obj2.strptr="RAMA";  // shallow copy constructor
+    *obj2.strptr="RAMA";  // Deep copy constructor
+    obj2.a=89;
+    obj2.b=76;
     obj2.getinfo();
     obj1.getinfo();
 }
