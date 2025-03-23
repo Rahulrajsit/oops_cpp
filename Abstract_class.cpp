@@ -3,7 +3,7 @@ using namespace std;
 
 class A{                // Abstract class and obj you can not create for this.
 public:
-    virtual void getinfo()=0;  // Pure Virtual Class
+    virtual void getinfo()=0;  // Pure Virtual Class use with virtual key 
 };
 class B:public A{
 public:
